@@ -1,0 +1,22 @@
+﻿@model IEnumerable<introDotNetCoreWithMVC.Models.Drink> 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>useModel</title>
+</head>
+<body>
+    <ul>
+
+        @foreach (var drink in Model)
+        {
+            <li>@drink.Name, @drink.Price TL </li>
+        }
+    </ul>
+</body>
+</html>

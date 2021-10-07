@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>Merhaba @ViewBag.Name</p>
+    @if (ViewBag.IsRedPill)
+    {
+        <p>Kırmızı hap tercih ettiniz...</p>
+    }
+    else
+    {
+        <p>Mavi hap tercih ettiniz...</p>
+
+    }
+
+    <ul>
+        @foreach (var item in ViewBag.Products)
+        {
+           <li>
+               @item.ToUpper()
+           </li>
+        }
+    </ul>
+    <a href="/Home/useModel">Model örneği</a>
+</body>
+</html>
